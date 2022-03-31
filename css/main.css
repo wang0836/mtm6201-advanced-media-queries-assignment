@@ -136,6 +136,7 @@ table {
 }
 
 /* Custom Styles */
+
 html {
   box-sizing: border-box;
 }
@@ -165,4 +166,91 @@ nav a:hover,
 nav a:focus {
   background-color: #968DFF;
   color: white;
+}
+
+
+
+
+/* Mobile */
+.container{
+  padding: 0 5%;
+}
+
+ul li{
+  text-align: center;
+  padding-top:1em;
+}
+
+.sm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1em;
+  gap: 1em;
+}
+.sm .im{
+  font-size: 2em;
+}
+
+
+
+/* tablet */
+@media screen and (min-width:43.75em){
+ul{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    column-gap: 1em;
+  }
+
+.sm{
+  justify-content: center;
+}  
+
+}
+
+/*  desktop */
+@media screen and (min-width:62.5em){
+ul{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap: 10em;
+  }
+
+  .sm {
+    justify-content: end;
+    width: 12em;
+    margin-left: 88%;
+
+  }
+  .sm a:nth-child(1){
+    order: 3;
+  }
+ 
+  .sm a:nth-child(2){
+   order: 4;
+ }
+
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  body{
+    background-color: #E0FF8D;
+  }
+
+nav a,
+nav a:link,
+nav a:visited {
+  background-color:#968DFF;
+  color:white;
+}
+
+nav a:hover,
+  nav a:focus {
+    background-color: #222;
+    color: #646464;
+  }
+  .im {
+    color: white;
+  }
 }
